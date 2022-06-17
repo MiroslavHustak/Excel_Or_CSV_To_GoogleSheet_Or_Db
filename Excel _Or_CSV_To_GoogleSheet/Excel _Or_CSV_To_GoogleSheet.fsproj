@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework> 
+
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <None Include="DLLSourceCode\WritingToGoogleSheets.cs" />
+	  <None Include="DLLSourceCode\GoogleSheetsHelper.cs" />
+	  <Compile Include="MyTypes.fs" />
+	  <Compile Include="ROP_Functions.fs" />
+	  <Compile Include="Csv.fs" />
+	  <Compile Include="Excel.fs" />
+	  <Compile Include="CreateDbForTestingPurposes.fs" />
+	  <Compile Include="CreateDb.fs" />
+	  <Compile Include="StartForTestingPurposes.fs" />
+    <Compile Include="Start.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExcelDataReader" Version="3.7.0-develop00310" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.7.0-develop00310" />
+    <PackageReference Include="ExcelProvider" Version="2.0.0" />
+    <PackageReference Include="FSharp.Data" Version="4.2.5" />
+    <PackageReference Include="FSharp.Data.SqlClient" Version="2.1.0-beta1" />
+    <PackageReference Include="microsoft.SqlServer.Types" Version="14.0.1016.290" />
+    <PackageReference Include="SQLProvider" Version="1.2.10" />
+    <PackageReference Include="System.Spatial" Version="5.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GoogleSheet">
+      <HintPath>..\..\GoogleSheet\GoogleSheet\bin\Release\GoogleSheet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.1" />
+  </ItemGroup>
+</Project>
